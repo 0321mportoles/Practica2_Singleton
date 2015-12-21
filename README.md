@@ -8,4 +8,5 @@ En el tutorial del enlace antes marcado, se habla del patrón de diseño "Single
 Este patrón se implementa haciendo privado el constructor de la clase y creando (en la propia clase) un método que crea una instancia del objeto si este no existe.
 
 Para más detalles del proyecto vista la web de jarroba.com:
+
 ![alt jarroba](http://jarroba.com/wp-content/themes/jarrobav6/static/img/logojarroba.png)
