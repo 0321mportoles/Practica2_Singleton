@@ -1,6 +1,3 @@
-/**
- * @author RicardoMoya
- */
 
 package Main;
 
@@ -8,19 +5,21 @@ public class Main {
 
     public static void main(String[] args) {
         
-        SoyUnico ricardo = SoyUnico.getSingletonInstance("Ricardo Moya");
-        SoyUnico ramon = SoyUnico.getSingletonInstance("Ramón Invarato");
+        // llamo a la funcion SoyUnico para que me imprima los nombres. 
+    	SoyUnico marta = SoyUnico.getSingletonInstance("Marta");
+        SoyUnico jacinto = SoyUnico.getSingletonInstance("Jacinto");
         
-        // ricardo y ramon son referencias a un único objeto de la clase SoyUnico
-        System.out.println(ramon.getNombre());
-        System.out.println(ricardo.getNombre());
+        // marta y jacinto son referencias a un unico objeto de la clase SoyUnico
+        System.out.println(marta.getNombre());
+        System.out.println(jacinto.getNombre());
         
         // No se permite clonar un objeto de esta clase
         try{
-            SoyUnico richard = ricardo.clone();
-            System.out.println(richard.getNombre());
-        }catch (NullPointerException ex){
-            ex.printStackTrace();
+            SoyUnico jacin = jacinto.clone(); 
+            System.out.println(jacin.getNombre());
+        } catch (NullPointerException ex){
+//        	System.out.println("Error");
+        	ex.printStackTrace();
         }
 
     }

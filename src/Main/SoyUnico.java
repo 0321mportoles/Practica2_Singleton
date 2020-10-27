@@ -1,7 +1,3 @@
-/**
- * @author RicardoMoya
- */
-
 package Main;
 
 public class SoyUnico {
@@ -16,6 +12,17 @@ public class SoyUnico {
         System.out.println("Mi nombre es: " + this.nombre);
     }
 
+        // getters y setters
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
+    // metodos
+    
     public static SoyUnico getSingletonInstance(String nombre) {
         if (soyUnico == null){
             soyUnico = new SoyUnico(nombre);
@@ -26,8 +33,8 @@ public class SoyUnico {
         
         return soyUnico;
     }
-    
-    //Sobreescribimos el método clone, para que no se pueda clonar un objeto de esta clase
+         
+    //Sobreescribimos el metodo clone, para que no se pueda clonar un objeto de esta clase
     @Override
     public SoyUnico clone(){
         try {
@@ -37,13 +44,4 @@ public class SoyUnico {
         }
         return null; 
     }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
 }
